@@ -19,21 +19,21 @@ add_submit.addEventListener("click", () => {
 });
 search_submit.addEventListener("click", () => {
   vyvod.innerHTML = "";
-  if (vvod_search.value == "") {
-    const p = document.createElement("p");
-    p.innerText = "Для поиска необходимо что-либо ввести";
-    p.style = "color:red"
-    vyvod.appendChild(p);
-  }
-  else {
-    items.forEach((item) => {
-        if (item.toLowerCase().includes(vvod_search.value.toLowerCase())) {
-          const li = document.createElement("li");
-          li.innerText = item;
-          vyvod.appendChild(li);
-        }
-      });
-  }
-  
+
+  items.forEach((item) => {
+      if (item.toLowerCase().includes(vvod_search.value.toLowerCase())) {
+        const li = document.createElement("li");
+        li.innerText = item;
+        vyvod.appendChild(li);
+      }
+    });
+
   vvod_search.value = "";
+});
+
+items.forEach((item) => {
+  
+    const li = document.createElement("li");
+    li.innerText = item;
+    vyvod.appendChild(li);
 });
