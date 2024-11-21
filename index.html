@@ -11,23 +11,27 @@
 
 <body>
 
-    <main>
+    <div class="container">
 
-        <div>
-            <label for="vvod_add">Введите цвет, который хотите добавить<input type="text" name="vvod_add" id="vvod_add"></label>
-            <input type="submit" name="add_item" id="add_item" value="добавить">
+        <div class="left">
+            <div>
+                <label for="vvod_add">Введите цвет, который хотите добавить<input type="text" name="vvod_add" id="vvod_add"></label>
+                <input type="submit" name="add_item" id="add_item" value="добавить">
+            </div>
+            <div>
+                <label for="vvod_search">Введите цвет, который хотите найти<input type="text" name="vvod_search" id="vvod_search"></label>
+                <input type="submit" name="search_item" id="search_item" value="найти">
+            </div>
         </div>
 
-        <div>
-            <label for="vvod_search">Введите цвет, который хотите найти<input type="text" name="vvod_search" id="vvod_search"></label>
-            <input type="submit" name="search_item" id="search_item" value="найти">
+        <div class="right">
+            <h3>Результаты поиска:</h3>
+            <ol id="vyvod">
+
+            </ol>
         </div>
 
-        <ol id="vyvod">
-
-        </ol>
-
-    </main>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
